@@ -20,3 +20,6 @@
 
 # Suite
 - [ ] Observer la nouvelle structure du code en orienté objet et coder les "todo"
+
+# Auteur
+- Arthur Taillez Groupe APP
