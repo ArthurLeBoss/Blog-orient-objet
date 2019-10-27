@@ -4,6 +4,7 @@
 class PostTable
 {
     protected $table = 'article';
+    protected $table_m = 'membres';
     private $db;
     
     public function __construct()
@@ -66,4 +67,28 @@ class PostTable
         $sth = $this->db->prepare("DELETE FROM {$this->table} WHERE id=? ");
         $sth->execute(array($id));
     }
+
+    #Pour la page inscription_oo
+    // public function register(Post $membres): Void
+    // {
+    //     $sth = $this->db->prepare("INSERT INTO {$this->table_m} (pseudo, pass, mail) VALUE (:pseudo, :pass, :mail)");
+    //     $pseudo = $membres->getPseudo();
+    //     $pass = $membres->getPass();
+    //     $mail = $membres->getMail();
+    //     $sth->bindParam(':pseudo', $pseudo);
+    //     $sth->bindParam(':pass', $pass);
+    //     $sth->bindParam(':mail', $mail);
+    //     $sth->execute();
+
+    // }
+
+    #Pour la page connexion_oo. J'ai essayé mais je n'ai pas réussi à cyrpter le mot de passe. Dans phpMyAdmin, j'ai réussi mais ici, non.
+
+    // public function update_pass(Post $membres): void 
+    // {
+    //     $sth = $this->db->prepare("UPDATE {$this->table_m} SET pass = MD5('pass') WHERE id='3'");
+    //     $id = $membres->getId();
+    //     $sth->bindParam(':id', $id);
+    //     $sth->execute();
+    // }
 }

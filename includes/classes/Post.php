@@ -6,7 +6,7 @@ class Post
     private $titre;
     private $contenu;
     private $categorie;
-    
+       
     public function getId(): int
     {
         return $this->id;
@@ -50,4 +50,39 @@ class Post
         $this->categorie = $categorie;
         return $this;
     }
+
+    public function getPseudo(): string
+    {
+        return $this->pseudo;
+    }
+
+    #Fonction pour la connexion et l'inscription OO.
+
+    // public function setPseudo(string $pseudo): self
+    // {
+    //     $this->pseudo = $pseudo;
+    //     return $this;
+    // }
+
+    // public function getPass(): string
+    // {
+    //     return $this->pass;
+    // }
+
+    // public function setPass(string $pass): self
+    // {
+    //     $this->pass = $pass;
+    //     return $this;
+    // }
+
+    // public function getMail(): string
+    // {
+    //     return $this->mail;
+    // }
+
+    // public function setMail(string $mail): self
+    // {
+    //     $this->mail = $mail;
+    //     return $this;
+    // }
 }
